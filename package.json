@@ -1,0 +1,36 @@
+{
+  "name": "designpattern-for-typescript",
+  "version": "1.0.0",
+  "description": "デザインパターン学習用",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "tsc --watch",
+    "lint": "next lint",
+    "prettier": "prettier --write --ignore-path .gitignore './src/**/*.{js,jsx,ts,tsx,json}'"
+  },
+  "keywords": [],
+  "author": "marucircle",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "eslint": "^8",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^8.0.3",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3"
+  },
+  "volta": {
+    "node": "20.10.0",
+    "yarn": "4.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": "npm run lint",
+    "src/**/*.{js,jsx,ts,tsx,json}": "npm run prettier"
+  }
+}
